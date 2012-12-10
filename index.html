@@ -99,6 +99,7 @@
         <section class="documentation">
             
   <div class="section" id="spec-bdd-with-phpspec">
+<!--
 <h1>Spec BDD with phpspec<a class="headerlink" href="#spec-bdd-with-phpspec" title="Permalink to this headline">¶</a></h1>
 <p><strong>phpspec</strong> is a development tool, designed to help you achieve clean and
 working PHP code by using a technique derived from test-first development
@@ -107,7 +108,7 @@ called (spec) behaviour driven developement, or SpecBDD.</p>
 to implement, using a tool like <strong>phpspec</strong>, then writing just enough code
 to quickly satisfy that specification and finally stopping to refactor the last increment,
 allowing the emergent design to guide the direction. This is done in small iterative steps.</p>
-<hr />
+<hr />-->
 <h1>phpspecでSpec BDD<a class="headerlink" href="#spec-bdd-with-phpspec" title="Permalink to this headline">¶</a></h1>
 </p><strong>phpspec</strong>は、（仕様）ビヘイビア駆動開発や、SpecBDDと呼ばれるテストファースト開発から派生した技術を用いて
 簡潔で動作するPHPのコード設計を助ける開発ツールです。</p>
@@ -116,11 +117,12 @@ allowing the emergent design to guide the direction. This is done in small itera
 最終的にリファクタリングを停止し、新しい設計の方向へ導くことを可能とします。
 これは、小さな反復のステップで行われます。</p>
 <div class="section" id="installation">
+<!--
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p><strong>phpspec</strong> is a php 5.3 library that you&#8217;ll have in your project
 development environment. Before you begin, ensure that you have at least
 PHP 5.3.1 installed.</p>
-<hr />
+<hr />-->
 <h2>インストール<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p><strong>phpspec</strong> is a php 5.3 library that you&#8217;ll have in your project
 development environment.
@@ -128,10 +130,11 @@ development environment.
 作業を始める前に、PHP5.3.1以上がインストールされてる事を確認して下さい。</p>
 <div class="section" id="method-1-composer">
 <h3>Method #1 (Composer)<a class="headerlink" href="#method-1-composer" title="Permalink to this headline">¶</a></h3>
+<!--
 <p>The simplest way to install phpspec with all its dependencies is through
 Composer:</p>
 <p>Create <tt class="docutils literal"><span class="pre">composer.json</span></tt> file in the project root:</p>
-<hr />
+<hr />-->
 <p>PHPSpecの全ての依存関係を持つ最も簡単な方法インストールする方法は、Composerを使用することです。</p>
 <p>プロジェクトルールに<tt class="docutils literal"><span class="pre">composer.json</span></tt>ファイルを作成します。</p>
 <div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
@@ -146,21 +149,24 @@ Composer:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+<!--
 <p>Then download <tt class="docutils literal"><span class="pre">composer.phar</span></tt> and run <tt class="docutils literal"><span class="pre">install</span></tt> command:</p>
-<hr />
+<hr />-->
 <p><tt class="docutils literal"><span class="pre">composer.phar</span></tt>をダウンロードし、<tt class="docutils literal"><span class="pre">install</span></tt>コマンドを実行します。</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>curl http://getcomposer.org/installer | php
 <span class="nv">$ </span>php composer.phar install --dev
 </pre></div>
 </div>
+<!--
 <p>Everything will be installed inside <tt class="docutils literal"><span class="pre">vendor</span></tt> folder and executable will
 be linked into <tt class="docutils literal"><span class="pre">bin</span></tt> folder.</p>
-<hr />
+<hr />-->
 <p>全て<tt class="docutils literal"><span class="pre">vendor</span></tt>フォルダ内にインストールされます。
 実行可能ファイルは<tt class="docutils literal"><span class="pre">bin</span></tt>フォルダ内にリンクされます。</p>
 </div>
 </div>
 <div class="section" id="specbdd-and-tdd">
+<!--
 <h2>SpecBDD and TDD<a class="headerlink" href="#specbdd-and-tdd" title="Permalink to this headline">¶</a></h2>
 <p>There isn&#8217;t any real difference between SpecBDD and TDD. The value of using
 a xSpec tool instead a regular xUnit tool for TDD is language. The concepts
@@ -168,7 +174,7 @@ and features of the tool will keep your focus on the &#8220;right&#8221; things.
 on verification and structure as opposed to behaviour and design is, of
 course, a valid one. We happen to find that the latter is more valuable on the
 long run. It was also the intention of early users of TDD.</p>
-<hr />
+<hr />-->
 <h2>SpecBDD と TDD<a class="headerlink" href="#specbdd-and-tdd" title="Permalink to this headline">¶</a></h2>
 <p>SpecBDDとTDDの間には実質的な違いはありません。
 xSpecはTDDの為の通常のツールxUnitの代わりとして使う価値がある言語です。
@@ -178,6 +184,7 @@ xSpecはTDDの為の通常のツールxUnitの代わりとして使う価値が�
 またそれが、TDDの初期ユーザーの意図でした。</p>
 </div>
 <div class="section" id="specbdd-and-storybdd">
+<!--
 <h2>SpecBDD and StoryBDD<a class="headerlink" href="#specbdd-and-storybdd" title="Permalink to this headline">¶</a></h2>
 <p>While with StoryBDD tools like <a class="reference external" href="http://behat.org">Behat</a> are used to
 understand and clarify the domain &mdash; specifying feature narratives, its need, and
@@ -200,7 +207,7 @@ refactor, or allow the design of your code to emerge in a sustainable way. SpecB
 designed to guide you in the process, or at least not stand on the way.</p>
 <p>t&#8217;s valid to assume that StoryBDD and SpecBDD used together are a very
 effective way to achieve highly customer-focused software.</p>
-<hr />
+<hr />-->
 <h2>SpecBDD と StoryBDD<a class="headerlink" href="#specbdd-and-storybdd" title="Permalink to this headline">¶</a></h2>
 <p>ある特定の領域を理解し明確にする為に<a class="reference external" href="http://behat.org">Behat</a>ようなStoryBDDツールを用いる間に、
 その必要性によって何を言おうとしているか、特徴を明確に物語ります。
@@ -227,6 +234,7 @@ SpecBDDツールは一連の流れに導くか、少なくとも途中で立ち�
 非常に顧客重視のソフトフェアを実現するのにとても効果的な方法であると考えるのは妥当です。</p>
 </div>
 <div class="section" id="getting-started">
+<!--
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>Say we are building a tool that converts
 <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> into HTML. Well, that&#8217;s a large
@@ -239,7 +247,7 @@ paragraph with HTML markup, i.e. <cite>&#8220;Hi, there&#8221;</cite> would beco
 <p>So let&#8217;s do this. Well, not the boring bits. Let <strong>phpspec</strong> take care of the
 boring stuff for us. We just need to tell <strong>phpspec</strong> we will be working on
 the <cite>Markdown</cite> class.</p>
-<hr />
+<hr />-->
 <h2>はじめに<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>仮に<a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a>HTMLに変換するツールを作っているとしたら、それは大仕事だろう。
 しかし、私は最初に単純な物事に取り組み、そして設計がすべての必要な機能に達することが明らかになるだろう。
@@ -251,22 +259,24 @@ the <cite>Markdown</cite> class.</p>
 <p>だからこれを実行してましょう。まぁ、少しも退屈でありません。
 <strong>phpspec</strong>に私たちにとって退屈なものの世話をしてもらいましょう。
 私たちは<cite>Markdown</cite>クラスについて作業しようとしていることを<strong>phpspec</strong>に伝える必要があります。</p>
+<!--
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>bin/phpspec desc Markdown
 <span class="nx">Specification for Markdown created in spec.</span>
 </pre></div>
 </div>
-<hr />
+<hr />-->
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>bin/phpspec desc Markdown
 <span class="nx">specフォルダ内にMarkdownクラスの為の仕様を作成</span>
 </pre></div>
 </div>
+<!--
 <p>You can also specify a fully qualified class name. Don&#8217;t forget that if you
 use backslashes you need to pass the class name inside double quotes.
 Alternatively you could use forward slashes and skip the quotes. <strong>phpspec</strong>
 will create the folder structure following PSR standards.</p>
 <p>Ok. What have we just done? <strong>phpspec</strong> has created the spec for us. You can
 navigate to the spec folder and see the spec there:</p>
-<hr />
+<hr />-->
 <p>また、完全修飾クラス名を指定することができます。
 バックスラッシュを使用する場合は、二重引用符内にクラス名を渡す必要があることを忘れないで下さい。
 別の方法として、スラッシュを使用して引用符を省略することができます。
@@ -288,6 +298,7 @@ navigate to the spec folder and see the spec there:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+<!--
 <p>That&#8217;s awesome! <strong>phpspec</strong> created the spec for me.</p>
 
 <p>But first, let&#8217;s see what we have here. Our spec extends the special
@@ -295,7 +306,7 @@ navigate to the spec folder and see the spec there:</p>
 This class is special, because it gives you ability to call all the methods of the
 class you are describing and match the result of the operations against your
 expectations.<p>
-<hr />
+<hr />-->
 <p>素晴らしい！<strong>phpspec</strong>は私の為に仕様を作ってくれました。</p>
 
 <p>とにかく最初にそこに何があるのか見てみましょう。
@@ -306,13 +317,14 @@ expectations.<p>
 <div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 
+<!--
 <p>The object behavior is made of examples. Examples are encased in public methods,
 started with <tt class="docutils literal"><span class="pre">it_</span></tt>.
 or <tt class="docutils literal"><span class="pre">its_</span></tt>.
 <strong>phpspec</strong> searches for such methods in your specification to run.
 Why underscores for example names? <tt class="docutils literal"><span class="pre">just_because_its_much_easier_to_read</span></tt>
 than <tt class="docutils literal"><span class="pre">someLongCamelCasingLikeThat</span></tt>.</p>
-<hr />
+<hr />-->
 
 <p>そのオブジェクトの振る舞いの例として作られます。
 例として、<strong>phpspec</strong>は、publicメソッドで、<tt class="docutils literal"><span class="pre">it_</span></tt>や、<tt class="docutils literal"><span class="pre">its_</span></tt>で始まる実行出来る仕様を探します。
@@ -323,6 +335,7 @@ than <tt class="docutils literal"><span class="pre">someLongCamelCasingLikeThat<
 <div class="section" id="matchers">
 <h3>Matchers<a class="headerlink" href="#matchers" title="Permalink to this headline">¶</a></h3>
 
+<!--
 <p>Matchers are much like assertions in xUnit, except the fact that matchers
 concentrate on telling how the object <strong>should</strong> behave instead of verifying how
 it works. It just expresses better the focus on behaviour and fits better in the test-first cycle.
@@ -342,7 +355,7 @@ one of them has aliases to make your examples read more fluid:</p>
 depending on what you expect and call them on subject of interest.</p>
 
 <p>Now we are ready to move on. Let&#8217;s update that first example to express my next intention:</p>
-<hr />
+<hr />-->
 
 <p>Matchersは、どのように動作するか検証する代わりに、
 どのようにオブジェクトが振る舞うべきなのかを伝えることに集中する事を除いて、
@@ -376,10 +389,11 @@ xUnitでいうアサーションによく似ています。
 <span class="p">}</span>
 </pre></div>
 </div>
+<!--
 <p>Now what? We run the specs. You may not believe this, but <strong>phpspec</strong> will
 understand we are describing a class that doesn&#8217;t exist and offer to create
 it!</p>
-<hr />
+<hr />-->
 <p>次は仕様を実行します。
 信じられないかもしれませんが、<strong>phpspec</strong>は存在しないクラスを理解し、作成するかどうか確認してくるでしょう。</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>bin/phpspec run
@@ -392,9 +406,10 @@ it!</p>
          <span class="nf">Do you want me to create it for you?</span> <span class="s2">[Y/n]</span>
 </pre></div>
 </div>
+<!--
 <p><strong>phpspec</strong> will then place the empty class in the directory. You run your
 spec again and... OK, you guessed:</p>
-<hr />
+<hr />-->
 <p><strong>phpspec</strong>はそのディレクトリ内に空のクラスを配置します。
 再び仕様を実行します、そしてOKと推測しました。</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>bin/phpspec run
@@ -407,8 +422,9 @@ spec again and... OK, you guessed:</p>
          <span class="nf">Do you want me to create it for you?</span> <span class="s2">[Y/n]</span>
 </pre></div>
 </div>
+<!--
 <p>What we just did was moving fast through the ambar state into the red.</p>
-<hr />
+<hr />-->
 <p>私たちがしたことは、すぐに黄色から赤になりました。</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
 
@@ -422,9 +438,10 @@ spec again and... OK, you guessed:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+<!--
 <p>We got rid of the fatal errors and ugly messages that resulted from nonexistent
 classes and methods and went straight into a real failed spec:</p>
-<hr />
+<hr />-->
 <p>私たちは、存在しないクラスや、メソッド、実際に間違った仕様が入り込んだことに起因する、
 致命的なエラーや、メッセージを取り除きます。</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>bin/phpspec run
@@ -439,11 +456,12 @@ classes and methods and went straight into a real failed spec:</p>
 284ms
 </pre></div>
 </div>
+<!--
 <p>According to the TDD rules we now have full permission to write code. Red
 means &#8220;time to add code&#8221;; red is great! Now we add just enough code to make
 the spec green, quickly. There will be time to get it right, but first just
 get it green.</p>
-<hr />
+<hr />-->
 <p>私たちはTDDのルールに従ったコードを記述する全ての権限をもっています。
 赤はコードを追加する時間を意味します。赤は素晴らしいです。
 私たちは、仕様が緑になる為に十分なコードをすぐに追加します。
@@ -458,8 +476,9 @@ get it green.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+<!--
 <p>And voil&agrave;:</p>
-<hr />
+<hr />-->
 <p>それで、出来上がり</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>bin/phpspec run
 
@@ -471,6 +490,7 @@ get it green.</p>
 247ms
 </pre></div>
 </div>
+<!--
 <p>I will leave the explanation of the whole TDD/SpecBDD cycle for a blog post.
 There are heaps of resources out there already. Here are just a couple for you look at:</p>
 <ol class="arabic simple">
@@ -481,7 +501,7 @@ Helmkamp, Dan North</li>
 <li><a class="reference external" href="http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530">Test Driven Development: By Example</a>
 Kent Beck</li>
 </ol>
-<hr />
+<hr />-->
 <p>私は、ブログへの投稿の為にTDD/SpecBDDサイクル全体の説明を残します。
 既にたくさんの情報があります。
 ここでちょうどあなたの為にいくつか紹介します。</p>
@@ -498,11 +518,12 @@ Kent Beck</li>
 
 <div class="section" id="stubs">
 <h3>Stubs<a class="headerlink" href="#stubs" title="Permalink to this headline">¶</a></h3>
+<!--
 <p>When you describing an object, you want your focus to be just there, in the
 object. You don&#8217;t want to wander off to start describing collaborators. You
 can very easily tell <strong>phpspec</strong> that there will be collaborators and stub
 their behaviour so you can describe your object message exchange with them.</p>
-<hr />
+<hr />-->
 <p>あなたがオブジェクトを記述するとき、オブジェクトの中身に集中するべきである。
 あなたは、collaboratorを記述し始めたら、逸れたくはありません。
 あたなは、collaboratorとstubの振る舞いをオブジェクトのメッセージ交換で記述できるのでとても簡単に<strong>phpspec</strong>に伝える事ができます。</p>
@@ -523,18 +544,20 @@ their behaviour so you can describe your object message exchange with them.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+<!--
 <p>To stub the behaviour of <tt class="docutils literal"><span class="pre">Markdown\Stream::getNextLine()</span></tt> we just need to
 pass it to the example, using widely used phpdoc notation, and configuring
 the stub is merely stating what it should return: <tt class="docutils literal"><span class="pre">-&gt;willReturn(&quot;&quot;)</span></tt>.</p>
-<hr />
+<hr />-->
 <p>広く使われているphpdoc記法を用いて、例に<tt class="docutils literal"><span class="pre">Markdown\Stream::getNextLine()</span></tt>の振る舞いのをするstubを渡さなければなりません。
 そして、stubの設定は<tt class="docutils literal"><span class="pre">-&gt;willReturn(&quot;&quot;)</span></tt>で単に何を返すべきなのかを知らせます。</p>
 </div>
 <div class="section" id="mocks">
 <h3>Mocks<a class="headerlink" href="#mocks" title="Permalink to this headline">¶</a></h3>
+<!--
 <p>In addition you will need to verify a message was sent to a collaborator
 during the normal execution of a method. You can specify a mock expectation with <tt class="docutils literal"><span class="pre">-&gt;shouldBeCalled()</span></tt></p>
-<hr />
+<hr />-->
 <p>さらに、あなたはメソッドの実行時にcollaboratorに送られたメッセージを確認する必要があります。
 あなたは<tt class="docutils literal"><span class="pre">-&gt;shouldBeCalled()</span></tt>を使ってモックを期待するように指定することができます。</p>
 You can specify a mock expectation with <tt class="docutils literal"><span class="pre">-&gt;shouldBeCalled()</span></tt></p>
@@ -563,9 +586,10 @@ You can specify a mock expectation with <tt class="docutils literal"><span class
 </div>
 <div class="section" id="let-and-let-go">
 <h2>Let and Let Go<a class="headerlink" href="#let-and-let-go" title="Permalink to this headline">¶</a></h2>
+<!--
 <p><strong>phpspec</strong> implements the symmetric setup and tear down using the <cite>let</cite> and
 <cite>letgo</cite> methods.</p>
-<hr />
+<hr />-->
 <p><strong>phpspec</strong>は対象的な機構を実装しています。<cite>let</cite>と
 <cite>letgo</cite>メソッドを使ってティアダウンを実装します。</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="k">class</span> <span class="nc">EverChangingWorld</span> <span class="k">extends</span> <span class="nx">ObjectBehavior</span>
